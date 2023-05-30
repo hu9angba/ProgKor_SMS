@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Jegy hozzáadása</title>
+
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h3 class="pt-5">Jegy hozzáadása</h3>
+
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <form method="post"
+                  th:action="@{/sms/create}">
+                <div class="form-group">
+                    <label for="name">Jegy hozzáadása</label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Tanuló</label>
+                    <input type="text"
+                           id="name"
+                           th:name="name"
+                           class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Tantárgy</label>
+                    <input type="text"
+                           id="subject"
+                           th:name="subject"
+                           class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Jegy</label>
+                    <input type="text"
+                           id="grade"
+                           th:name="grade"
+                           class="form-control"/>
+                </div>
+
+                <button class="btn btn-primary pt-2"
+                        type="submit">Létrehoz
+                </button>
+                <a th:href="@{/sms}"
+                   class="btn btn-secondary pt-2"
+                   type="submit">Vissza a listához</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
