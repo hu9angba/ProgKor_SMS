@@ -76,5 +76,11 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/hu9angba/ProgKor_SMS</url>
+		</repository>
+	</distributionManagement>
 </project>
