@@ -9,9 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.SMS</groupId>
-	<artifactId>Student-Management-System</artifactId>
+	<artifactId>student-management-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
 	<name>Student-Management-System</name>
 	<description>Student Management System  project </description>
 	<properties>
