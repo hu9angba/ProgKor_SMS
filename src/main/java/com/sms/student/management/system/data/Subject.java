@@ -1,4 +1,4 @@
-package com.SMS.Student.Management.System.data;
+package com.sms.student.management.system.data;
 
 public enum Subject {
     Maths,

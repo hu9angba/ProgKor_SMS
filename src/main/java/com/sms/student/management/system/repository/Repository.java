@@ -1,4 +1,4 @@
-package com.SMS.Student.Management.System.repository;
+package com.sms.student.management.system.repository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,13 +1,13 @@
-package com.SMS.Student.Management.System;
+package com.sms.student.management.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentManagementSystemApplication {
+public class studentmanagementsystemapplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentManagementSystemApplication.class, args);
+		SpringApplication.run(studentmanagementsystemapplication.class, args);
 	}
 
 }

@@ -1,7 +1,7 @@
-package com.SMS.Student.Management.System.web.controller;
+package com.sms.student.management.system.web.controller;
 
-import com.SMS.Student.Management.System.data.SMS;
-import com.SMS.Student.Management.System.service.SMSService;
+import com.sms.student.management.system.data.sms;
+import com.sms.student.management.system.service.SMSService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +28,8 @@ public class StudentCatalogRestController {
          * @return the song object
          */
         @GetMapping("/{id}")
-        public ResponseEntity<SMS> getsongbyid  (@PathVariable Long id) {
-            Optional<SMS> sms = smsService.retrieveSMSById (id);
+        public ResponseEntity<sms> getsongbyid  (@PathVariable Long id) {
+            Optional<sms> sms = smsService.retrieveSMSById (id);
             return sms.map(ResponseEntity::ok)
                     .orElseGet(() -> ResponseEntity.notFound().build());
         }
@@ -40,7 +40,7 @@ public class StudentCatalogRestController {
          * @return the list of songs
          */
         @GetMapping
-        public List<SMS> getAllSMS() {
+        public List<sms> getAllSMS() {
             return smsService.retrieveAllSMS();
         }
 
@@ -51,7 +51,7 @@ public class StudentCatalogRestController {
          * @return the created song object
          */
         @PostMapping
-        public SMS createSong(@RequestBody SMS sms) {
+        public sms createSong(@RequestBody sms sms) {
             return smsService.createSMS(sms);
         }
 
@@ -62,7 +62,7 @@ public class StudentCatalogRestController {
          * @return the updated song object
          */
         @PutMapping
-        public SMS updatesms (@RequestBody SMS sms) {
+        public sms updatesms (@RequestBody sms sms) {
             return smsService.updateSMS(sms);
         }
 

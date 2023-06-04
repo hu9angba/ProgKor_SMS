@@ -1,4 +1,4 @@
-package com.SMS.Student.Management.System.web;
+package com.sms.student.management.system.web;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

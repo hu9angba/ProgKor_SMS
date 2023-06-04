@@ -1,7 +1,7 @@
-package com.SMS.Student.Management.System.web.controller;
+package com.sms.student.management.system.web.controller;
 
-import com.SMS.Student.Management.System.data.SMS;
-import com.SMS.Student.Management.System.service.SMSService;
+import com.sms.student.management.system.data.sms;
+import com.sms.student.management.system.service.SMSService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -35,7 +35,7 @@ public class StudentCatalogController {
          */
         @GetMapping("/{id}")
         public String getSMSById(Model model, @PathVariable Long id) {
-            Optional<SMS> optionalSMS = smsService.retrieveSMSById(id);
+            Optional<sms> optionalSMS = smsService.retrieveSMSById(id);
             return optionalSMS.map(student -> {
                 model.addAttribute("student", student);
                 return "sms/edit";
@@ -53,7 +53,7 @@ public class StudentCatalogController {
          */
         @GetMapping
         public String getAllSongs(Model model) {
-            List<SMS> allSongs = smsService.retrieveAllSMS();
+            List<sms> allSongs = smsService.retrieveAllSMS();
             model.addAttribute("songs", allSongs);
             return "sms/list";
         }
@@ -77,8 +77,8 @@ public class StudentCatalogController {
          * @return the name of the edit view to render
          */
         @PostMapping("/create")
-        public String createSms(Model model, SMS sms) {
-            SMS newsms = smsService.createSMS(sms);
+        public String createSms(Model model, sms sms) {
+            sms newsms = smsService.createSMS(sms);
             model.addAttribute("sms", newsms);
             return "sms/edit";
         }
@@ -92,8 +92,8 @@ public class StudentCatalogController {
          * @return the name of the edit view to render
          */
         @PostMapping(value = "/update", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-        public String updateSMS(Model model, SMS sms) {
-            SMS updateSMS = smsService.updateSMS(sms);
+        public String updateSMS(Model model, sms sms) {
+            sms updateSMS = smsService.updateSMS(sms);
             model.addAttribute("sms", updateSMS);
             return "sms/edit";
         }
@@ -109,7 +109,7 @@ public class StudentCatalogController {
         @GetMapping("/{id}/delete")
         public String deleteSongById(Model model, @PathVariable Long id) {
             smsService.deleteSMSById(id);
-            List<SMS> allStudent  = smsService.retrieveAllSMS();
+            List<sms> allStudent  = smsService.retrieveAllSMS();
             model.addAttribute("student", allStudent);
             return "sms/list";
         }
