@@ -8,12 +8,11 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.SMS</groupId>
-	<artifactId>Student-Management-System</artifactId>
+	<groupId>com.sms</groupId>
+	<artifactId>student-management-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
 	<name>Student-Management-System</name>
-	<description>Student Management System  project </description>
+	<description>student-management-system  project </description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-boot.version>3.0.5</spring-boot.version>
@@ -98,12 +97,12 @@
 				</executions>
 				<configuration>
 					<excludes>
-						<exclude>com\SMS\Student\Management\System\data\**</exclude>
-						<exclude>com\SMS\Student\Management\System\web\controller\**</exclude>
-						<exclude>com\SMS\Student\Management\System\StudentManagementSystemApplication.class</exclude>
-						<exclude>com\SMS\Student\Management\System\repository\**</exclude>
-						<exclude>com\SMS\Student\Management\System\service\**</exclude>
-						<exclude>com\SMS\Student\Management\System\web\**</exclude>
+						<exclude>com\sms\student\management\system\data\**</exclude>
+						<exclude>com\sms\student\management\system\web\controller\**</exclude>
+						<exclude>com\sms\student\management\system\studentmanagementsystemapplication.class</exclude>
+						<exclude>com\sms\student\management\system\repository\**</exclude>
+						<exclude>com\sms\student\management\system\service\**</exclude>
+						<exclude>com\sms\student\management\system\web\**</exclude>
 						<exclude>*Test</exclude>
 					</excludes>
 					<rules>

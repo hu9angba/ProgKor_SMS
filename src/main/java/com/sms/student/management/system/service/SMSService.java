@@ -1,6 +1,6 @@
-package com.SMS.Student.Management.System.service;
+package com.sms.student.management.system.service;
 
-import com.SMS.Student.Management.System.data.SMS;
+import com.sms.student.management.system.data.sms;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public interface SMSService {
          * @param sms the song to create
          * @return the created song
          */
-        SMS createSMS(SMS sms);
+        sms createSMS(sms sms);
 
         /**
          * Retrieves a song by its id.
@@ -27,14 +27,14 @@ public interface SMSService {
          * @param id the id of the song to retrieve
          * @return the retrieved song or empty optional if it was not found
          */
-        Optional<SMS> retrieveSMSById(Long id);
+        Optional<sms> retrieveSMSById(Long id);
 
         /**
          * Retrieves all the songs in the catalog.
          *
          * @return the list of found songs
          */
-        List<SMS> retrieveAllSMS();
+        List<sms> retrieveAllSMS();
 
         /**
          * Updates an existing song.
@@ -42,7 +42,7 @@ public interface SMSService {
          * @param sms the song to update
          * @return the updated song
          */
-        SMS updateSMS(SMS sms);
+        sms updateSMS(sms sms);
 
         /**
          * Deletes a song by its id.

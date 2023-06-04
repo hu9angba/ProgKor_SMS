@@ -1,45 +1,42 @@
-package com.SMS.Student.Management.System.service;
-import com.SMS.Student.Management.System.data.*;
-import com.SMS.Student.Management.System.repository.Repository;
-import com.SMS.Student.Management.System.repository.InMemoryStudentRepository;
+package com.sms.student.management.system.service;
+import com.sms.student.management.system.data.*;
+import com.sms.student.management.system.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-import com.SMS.Student.Management.System.repository.Repository;
-import com.SMS.Student.Management.System.service.SMSService;
-    /**
+/**
      * Default implementation of {@link SMSService}.
      */
     @Service
     public class DefaultSMSService implements SMSService {
 
-        public final Repository <SMS, Long> SMSRepository;
+        public final Repository <sms, Long> SMSRepository;
 
         @Autowired
-        public DefaultSMSService(Repository <SMS, Long> SMSRepository)
+        public DefaultSMSService(Repository <sms, Long> SMSRepository)
         {
             this.SMSRepository = SMSRepository;
         }
 
         @Override
-        public SMS createSMS(SMS student) {
+        public sms createSMS(sms student) {
             return SMSRepository.save(student);
         }
 
         @Override
-        public Optional<SMS> retrieveSMSById(Long id) {
+        public Optional<sms> retrieveSMSById(Long id) {
             return SMSRepository.getById(id);
         }
 
         @Override
-        public List<SMS> retrieveAllSMS() {
+        public List<sms> retrieveAllSMS() {
             return SMSRepository.getAll();
         }
 
         @Override
-        public SMS updateSMS(SMS sms) {
+        public sms updateSMS(sms sms) {
             return SMSRepository.update( sms );
         }
 

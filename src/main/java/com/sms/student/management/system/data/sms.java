@@ -1,8 +1,8 @@
-package com.SMS.Student.Management.System.data;
+package com.sms.student.management.system.data;
 
 import java.util.Objects;
 
-public class SMS {
+public class sms {
 
     /**
      * Model class for Students.
@@ -14,10 +14,10 @@ public class SMS {
         private String grade;
 
 
-        public SMS() {
+        public sms() {
         }
 
-        public SMS(Long id, String name, String subject, String grade) {
+        public sms(Long id, String name, String subject, String grade) {
             this.id = id;
             this.name = name;
             this.subject = subject;
@@ -67,7 +67,7 @@ public class SMS {
                 return false;
             }
 
-            SMS sms = (SMS) o;
+            sms sms = (sms) o;
 
             if (!Objects.equals(id, sms.id)) {
                 return false;
