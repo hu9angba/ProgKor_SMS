@@ -1,6 +1,6 @@
 package com.SMS.Student.Management.System.repository;
 import com.SMS.Student.Management.System.data.SMS;
-import com.SMS.Student.Management.System.repository.Repository;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

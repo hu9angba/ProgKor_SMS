@@ -1,15 +1,12 @@
 package com.SMS.Student.Management.System.service;
 import com.SMS.Student.Management.System.data.*;
 import com.SMS.Student.Management.System.repository.Repository;
-import com.SMS.Student.Management.System.repository.InMemoryStudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-import com.SMS.Student.Management.System.repository.Repository;
-import com.SMS.Student.Management.System.service.SMSService;
-    /**
+/**
      * Default implementation of {@link SMSService}.
      */
     @Service
