@@ -95,7 +95,7 @@ public class sms {
 
         @Override
         public String toString() {
-            return "Song{"
+            return "sms{"
                     + "id=" + id
                     + ", nev='" + name + '\''
                     + ", tantargy='" + subject + '\''
